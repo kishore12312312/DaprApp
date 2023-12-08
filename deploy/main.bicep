@@ -12,7 +12,7 @@ param pythonPort int = 5000
 var pythonServiceAppName = 'python-app'
 
 param goImage string
-param goPort int = 8050
+param goPort int = 8050 
 var goServiceAppName = 'go-app'
 
 param apimName string = 'store-api-mgmt-${uniqueString(resourceGroup().id)}'
@@ -87,7 +87,7 @@ module pythonService 'container-http.bicep' = {
   }
 }
 
-resource stateDaprComponent 'Microsoft.App/managedEnvironments/daprComponents@2022-01-01-preview' = {
+resource stateDaprComponent 'Microsoft.App/managedEnvironments/daprComponents@2023-08-01-preview' = {
   name: '${environmentName}/orders'
   dependsOn: [
     environment
