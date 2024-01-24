@@ -8,7 +8,7 @@ on:
       - "README.md"
       - ".vscode/**"
       - "assets/**"
-      - "build-and-run.md"
+      - "build-and-run.md" 
   workflow_dispatch:
 
 env:
